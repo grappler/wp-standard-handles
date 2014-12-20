@@ -31,7 +31,7 @@ wp_enqueue_script( 'fluidvids', plugin_dir_url( __FILE__ ) . '/js/fluidvids.min.
 
 ### Google Web Fonts
 ```php
-wp_enqueue_style( 'google-font-archivo-narrow', //fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic&subset=latin,latin-ext', array(), '2014-12-20', 'all' );
+wp_enqueue_style( 'google-font-archivo-narrow', '//fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic&subset=latin,latin-ext', array(), '2014-12-20', 'all' );
 ```
 
 ### enquire.js
