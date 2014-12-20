@@ -68,8 +68,8 @@ add_image_size( $name, $width, $height, $crop );
 add_image_size( '900x0', 900, 0, false );
 add_image_size( '910x460-crop', 910, 460, true );
 add_image_size( '920x470-left-top', 920, 470, array( 'left', 'top' ) );
-add_image_size( '930x0-left-top', 930, 0, array( 'right', 'center' ) );
-add_image_size( '9999x480-left-top', 9999, 480, array( 'center', 'bottom' ) );
+add_image_size( '930x0-right-center', 930, 0, array( 'right', 'center' ) );
+add_image_size( '9999x480-center-bottom', 9999, 480, array( 'center', 'bottom' ) );
 ```
 
 ## Contribution
