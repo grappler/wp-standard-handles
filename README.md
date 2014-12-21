@@ -1,6 +1,6 @@
 # WP Standard Handles
 
-Standard handles for wp_enqueue_script(), wp_enqueue_style() and add_image_size()
+Standard handles for `wp_enqueue_script()`, `wp_enqueue_style()` and `add_image_size()`
 
 ## Styles and Scripts
 
@@ -9,9 +9,9 @@ Plugin and theme authors are told they should prefix all of the handles when enq
 `wp_enqueue_style( $handle, $src, $deps, $ver, $media );`
 `wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );`
 
-I have started with a few. I am not sure how the google fonts should be best labelled as there are so many variations.
+I have started with a few. I am not sure how the Google Web Fonts should be best labelled as there are so many variations.
 
-### Front Awsome
+### Font Awsome
 ```php
 wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.2.0', 'all' );
 wp_enqueue_style( 'font-awesome', plugin_dir_url( __FILE__ ) . '/css/font-awesome.min.css', array(), '4.2.0', 'all' );
@@ -29,9 +29,9 @@ wp_enqueue_script( 'fluidvids', get_template_directory_uri() . '/js/fluidvids.mi
 wp_enqueue_script( 'fluidvids', plugin_dir_url( __FILE__ ) . '/js/fluidvids.min.js', array(), '2.4.1', true );
 ```
 
-### Google Fonts
+### Google Web Fonts
 ```php
-wp_enqueue_style( 'google-font-archivo-narrow', //fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic&subset=latin,latin-ext', array(), '4.2.0', 'all' );
+wp_enqueue_style( 'google-font-archivo-narrow', '//fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic&subset=latin,latin-ext', array(), '2014-12-20', 'all' );
 ```
 
 ### enquire.js
@@ -59,7 +59,7 @@ wp_enqueue_style( 'jquery-superfish-vertical', plugin_dir_url( __FILE__ ) . '/cs
 ```
 
 ## Image sizes
-Image sizes handles has the same problem as the styles and scripts. Themes and plugins use handles that describe where the images are used. The problem with that is if the handles is defined twice the second definition is used. The recommendation for this reason has been always to prefix the handles. The problem with that is that the handles are saved to the database when the image size is generated. So when you switch from theme you would need to regenerate all of the images even if both themes used the same image dimensions.
+Image sizes handles have the same problem as the styles and scripts. Themes and plugins use handles that describe where the images are used. The problem with that is if the handles is defined twice the second definition is used. The recommendation for this reason has been always to prefix the handles. The problem with that is that the handles are saved to the database when the image size is generated. So when you switch from theme you would need to regenerate all of the images even if both themes used the same image dimensions.
 
 By defining a naming standard the plugins and themes can work better with each other. The handles should be named after the dimensions and crop setting. Here are some examples.
 
