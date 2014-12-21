@@ -30,6 +30,7 @@ wp_enqueue_script( 'fluidvids', plugin_dir_url( __FILE__ ) . '/js/fluidvids.min.
 ```
 
 ### Google Web Fonts
+I have created a bit more advanced version in functions.php
 ```php
 wp_enqueue_style( 'google-font-archivo-narrow', '//fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic&subset=latin,latin-ext', array(), '2014-12-20', 'all' );
 ```
@@ -77,4 +78,3 @@ I welcome contributions from other people. Feel free to create a PR or open an i
 
 ## Licence
 This is licenced under GPLv2
-
