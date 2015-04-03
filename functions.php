@@ -15,7 +15,7 @@ add_action( 'wp_enqueue_scripts', 'prefix_enqueue_google_web_fonts' );
 function prefix_google_web_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
+	$subsets   = array( 'latin', 'latin-ext' );
 
 	$fonts = apply_filters( 'pre_google_web_fonts', $fonts );
 
@@ -26,20 +26,22 @@ function prefix_google_web_fonts_url() {
 	/* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
 	$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'text-domain' );
 	if ( 'cyrillic' == $subset ) {
-		$subsets .= ',cyrillic,cyrillic-ext';
+		array_push( $subsets, 'cyrillic', 'cyrillic-ext' );
 	} elseif ( 'greek' == $subset ) {
-		$subsets .= ',greek,greek-ext';
+		array_push( $subsets, 'greek', 'greek-ext' );
 	} elseif ( 'devanagari' == $subset ) {
-		$subsets .= ',devanagari';
+		array_push( $subsets, 'devanagari' );
 	} elseif ( 'vietnamese' == $subset ) {
-		$subsets .= ',vietnamese';
+		array_push( $subsets, 'vietnamese' );
 	}
+
+	$subsets = apply_filters( 'subsets_google_web_fonts', $subsets );
 
 	if ( $fonts ) {
 		$fonts_url = add_query_arg(
 			array(
 				'family' => urlencode( implode( '|', $fonts ) ),
-				'subset' => urlencode( $subsets ),
+				'subset' => urlencode( implode( ',', array_unique( $subsets ) ) ),
 			),
 			'//fonts.googleapis.com/css'
 		);
