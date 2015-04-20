@@ -59,6 +59,12 @@ wp_enqueue_style( 'jquery-superfish-vertical', get_template_directory_uri() . '/
 wp_enqueue_style( 'jquery-superfish-vertical', plugin_dir_url( __FILE__ ) . '/css/superfish-vertical.css', array(), '1.7.5', 'all' );
 ```
 
+### mustache.js
+```php
+wp_enqueue_script( 'mustache.js', get_template_directory_uri() . '/js/mustache.min.js', array(), '2.0.0', true );
+wp_enqueue_script( 'mustache.js', plugin_dir_url( __FILE__ ) . '/js/mustache.min.js', array(), '2.0.0', true );
+```
+
 ## Image sizes
 Image sizes handles have the same problem as the styles and scripts. Themes and plugins use handles that describe where the images are used. The problem with that is if the handles is defined twice the second definition is used. The recommendation for this reason has been always to prefix the handles. The problem with that is that the handles are saved to the database when the image size is generated. So when you switch from theme you would need to regenerate all of the images even if both themes used the same image dimensions.
 
