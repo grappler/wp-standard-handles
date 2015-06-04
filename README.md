@@ -11,7 +11,7 @@ Plugin and theme authors are told they should prefix all of the handles when enq
 
 I have started with a few. I am not sure how the Google Web Fonts should be best labelled as there are so many variations.
 
-### Font Awsome
+### Font Awesome
 ```php
 wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.2.0', 'all' );
 wp_enqueue_style( 'font-awesome', plugin_dir_url( __FILE__ ) . '/css/font-awesome.min.css', array(), '4.2.0', 'all' );
