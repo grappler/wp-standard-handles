@@ -29,6 +29,12 @@ wp_enqueue_script( 'fluidvids', get_template_directory_uri() . '/js/fluidvids.mi
 wp_enqueue_script( 'fluidvids', plugin_dir_url( __FILE__ ) . '/js/fluidvids.min.js', array(), '2.4.1', true );
 ```
 
+### FlexSlider
+```php
+wp_enqueue_script( 'jquery-flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array( 'jquery' ), '2.5.0', true );
+wp_enqueue_script( 'jquery-flexslider', plugin_dir_url( __FILE__ ) . '/js/jquery.flexslider.js', array( 'jquery' ), '2.5.0', true );
+```
+
 ### Google Web Fonts
 I have created a bit more advanced version in functions.php
 ```php
