@@ -65,6 +65,12 @@ wp_enqueue_style( 'jquery-superfish-vertical', get_template_directory_uri() . '/
 wp_enqueue_style( 'jquery-superfish-vertical', plugin_dir_url( __FILE__ ) . '/css/superfish-vertical.css', array(), '1.7.5', 'all' );
 ```
 
+### TouchSwipe
+```php
+wp_enqueue_script( 'jquery-touchswipe', get_template_directory_uri() . '/js/jquery.touchswipe.js', array( 'jquery' ), '1.6.9', true );
+wp_enqueue_script( 'jquery-touchswipe', plugin_dir_url( __FILE__ ) . '/js/jquery.touchswipe.js', array( 'jquery' ), '1.6.9', true );
+```
+
 ### mustache.js
 ```php
 wp_enqueue_script( 'mustache.js', get_template_directory_uri() . '/js/mustache.min.js', array(), '2.0.0', true );
