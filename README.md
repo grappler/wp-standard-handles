@@ -65,6 +65,12 @@ wp_enqueue_style( 'jquery-superfish-vertical', get_template_directory_uri() . '/
 wp_enqueue_style( 'jquery-superfish-vertical', plugin_dir_url( __FILE__ ) . '/css/superfish-vertical.css', array(), '1.7.5', 'all' );
 ```
 
+### Transit
+```php
+wp_enqueue_script( 'jquery-transit', get_template_directory_uri() . '/js/jquery.transit.js', array( 'jquery' ), '0.9.12', true );
+wp_enqueue_script( 'jquery-transit', plugin_dir_url( __FILE__ ) . '/js/jquery.transit.js', array( 'jquery' ), '0.9.12', true );
+```
+
 ### TouchSwipe
 ```php
 wp_enqueue_script( 'jquery-touchswipe', get_template_directory_uri() . '/js/jquery.touchswipe.js', array( 'jquery' ), '1.6.9', true );
